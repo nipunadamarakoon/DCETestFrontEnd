@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>Confirm !</h1>
+<div mat-dialog-content>&nbsp;&nbsp;&nbsp;Are you sure ?</div>
+<div style="float: right" class="button-row">
+  <button type="reset" mat-raised-button color="warn" (click)="Submit(false)">
+    Cancel
+  </button>
+  <button
+    mat-raised-button
+    color="primary"
+    type="submit"
+    (click)="Submit(true)"
+  >
+    Confirm
+  </button>
+</div>

@@ -1,0 +1,42 @@
+<div
+  mat-dialog-title
+  style="width: 100%; background-color: rgb(255, 91, 55)"
+  class="p-2 btn"
+>
+  {{ submitButtonTXT }} User Details
+  <button
+    mat-raised-button
+    color="warn"
+    style="float: right; margin: auto; font-size: 24px"
+    (click)="CloseDialog()"
+  >
+    X
+  </button>
+</div>
+<form [formGroup]="userForm" class="normal-form">
+  <mat-grid-list cols="2">
+    <mat-grid-tile style="height: 100%">
+      <div class="controles-container">
+        <mat-form-field>
+          <input
+            formControlName="name"
+            matInput
+            placeholder="First Name"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            formControlName="job"
+            matInput
+            placeholder="Job"
+          />
+        </mat-form-field>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <div style="float: right" class="button-row">
+    <button mat-raised-button color="primary" type="submit" (click)="Submit()">
+      {{ submitButtonTXT }}
+    </button>
+  </div>
+</form>
